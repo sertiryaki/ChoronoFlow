@@ -26,7 +26,7 @@ class _AileEkraniState extends State<AileEkrani> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: cocuklar.length, vsync: this);
+    _tabController = TabController(length: cocuklar.length + 1, vsync: this);
   }
 
   void cocukEkle() {
@@ -51,7 +51,7 @@ class _AileEkraniState extends State<AileEkrani> with TickerProviderStateMixin {
                 setState(() {
                   cocuklar.add(isim);
                   gorevler[isim] = [];
-                  _tabController = TabController(length: cocuklar.length, vsync: this);
+                  _tabController = TabController(length: cocuklar.length + 1, vsync: this);
                 });
               }
               Navigator.pop(context);
@@ -204,6 +204,12 @@ class _AileEkraniState extends State<AileEkrani> with TickerProviderStateMixin {
                 ),
               );
             }),
+            Center(
+              child: Text(
+                "Yeni çocuk eklemek için '+' sekmesine tıkla",
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
           ],
         ),
       ),

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Zaman Yönetimi Uygulaması',
       theme: ThemeData(primarySwatch: Colors.teal),
-      home: AnaMenu(),
+      home: AnaMenu(), // ← Ana menüden başlar
       debugShowCheckedModeBanner: false,
     );
   }
@@ -60,7 +60,7 @@ class AnaMenu extends StatelessWidget {
                   context,
                   "Aile Planlaması",
                   Icons.family_restroom,
-                  AileEkrani(), // Burada doğrudan çağrılıyor
+                  AileEkrani(), // ← Butona basınca aile ekranı açılır
                 ),
               ],
             ),
